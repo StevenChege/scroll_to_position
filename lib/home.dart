@@ -16,30 +16,33 @@ class _HomeState extends State<Home> {
   ScrollController scrollingController = ScrollController();
   bool isScrollingDown = true;
 
+  void _scrollListener() {
+    if (scrollingController.position.userScrollDirection ==
+        ScrollDirection.reverse) {
+      if (!isScrollingDown) {
+        isScrollingDown = true;
+      }
+    }
+
+    if (scrollingController.position.userScrollDirection ==
+        ScrollDirection.forward) {
+      if (isScrollingDown) {
+        isScrollingDown = false;
+      }
+    }
+  }
+
   @override
   void initState() {
     scrollingController = ScrollController();
-    scrollingController.addListener(() {
-      if (scrollingController.position.userScrollDirection ==
-          ScrollDirection.reverse) {
-        if (!isScrollingDown) {
-          isScrollingDown = true;
-        }
-      }
-
-      if (scrollingController.position.userScrollDirection ==
-          ScrollDirection.forward) {
-        if (isScrollingDown) {
-          isScrollingDown = false;
-        }
-      }
-    });
+    scrollingController.addListener(_scrollListener);
     super.initState();
   }
 
   @override
   void dispose() {
     scrollingController.dispose();
+    scrollingController.removeListener(_scrollListener);
     super.dispose();
   }
 
