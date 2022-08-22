@@ -1,16 +1,13 @@
-# scroll_to_position
+<h1 align="start" style="font-size: 52px;" ><img height=30 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png"> Scroll-to-position </h1>
 
-A new Flutter project.
+Perforn cuustom scrolling with Slivers.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+<img src="https://raw.githubusercontent.com/StevenChege/scroll_to_position/main/screenshot.png"> 
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🤖 Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- CustomScrollView
+- Animate to position
+- Slivers
